@@ -1,0 +1,83 @@
+*{
+margin :0;
+padding : 0;
+box-sizing : boder-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(0, 0, 0);
+}
+.scan{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.scan .fingerprint{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: url(./hacker.png);
+    background-size: 100px;
+}
+.scan .fingerprint::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./hacker2.png);
+    background-size: 100px;
+    animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate {
+    0%, 100%{
+        height: 0%;
+    }
+    50%{
+        height: 100%;
+    }
+}
+.scan .fingerprint::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1.8px;
+    background: #1eb02f;
+    box-shadow: 1.7px 1.7px 3px 3px green;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 20px #1eb02f) drop-shadow(0 0 60px #1eb02f);
+    animation: line 4s ease-in-out infinite;
+}
+@keyframes line {
+    0%, 100%{
+        top: 0%;
+    }
+    50%{
+        top: 100%;
+    }
+}
+.scan h3{
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    margin-left: 30px;
+    color: #1eb02f ;
+    filter: drop-shadow(0 0 20px #1eb02f) drop-shadow(0 0 60px #1eb02f);
+    animation: text 1.8s steps(1) infinite;
+}
+@keyframes text {
+    0%, 100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
