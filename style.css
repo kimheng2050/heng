@@ -9,6 +9,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background: rgb(0, 0, 0);
+    animation: text 2s steps(30) infinite;
 }
 .scan{
     position: relative;
@@ -22,6 +23,7 @@ body{
     height: 100px;
     background: url(./hacker.png);
     background-size: 100px;
+    animation: text 20s steps(5) infinite;
 }
 .scan .fingerprint::before{
     content: "";
@@ -71,7 +73,16 @@ body{
     margin-left: 30px;
     color: #1eb02f ;
     filter: drop-shadow(0 0 20px #1eb02f) drop-shadow(0 0 60px #1eb02f);
-    animation: text 1.8s steps(1) infinite;
+    animation: text 0.1s steps(1) infinite;
+}
+.scan p{
+    text-transform: uppercase;
+    font-size: 0.5em;
+    letter-spacing: 2px;
+    margin-left: 20px;
+    color: #1eb02f ;
+    filter: drop-shadow(0 0 20px #1eb02f) drop-shadow(0 0 60px #1eb02f);
+    animation: text 10s steps(3) infinite;
 }
 @keyframes text {
     0%, 100%{
